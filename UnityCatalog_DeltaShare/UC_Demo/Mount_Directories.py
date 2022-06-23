@@ -97,16 +97,4 @@ dbutils.fs.ls("/mnt/datalake-silver")
 # Validate If Mountpoint datalake-gold exists
 dbutils.fs.ls("/mnt/datalake-gold")
 
-# COMMAND ----------
 
-  #Get Secrets from the Key Vault using the databricks defined scope
-  #CLIENT_ID = dbutils.secrets.get(scope = "dgit-npe-ase-ADBWS-Secret-Scope", key = "dgitnpeaseadls-sp-client-id")
-  #CLIENT_KEY = dbutils.secrets.get(scope = "dgit-npe-ase-ADBWS-Secret-Scope", key = "dgitnpeaseadls-sp-secret-value")
-  #DIRECTORY_ID = dbutils.secrets.get(scope = "dgit-npe-ase-ADBWS-Secret-Scope", key = "dgitnpeaseadls-sp-tenant-id")
-  
-  #Standard Configurations for connecting to Data Lake
-  #configs = {"fs.azure.account.auth.type": "OAuth",
-  #         "fs.azure.account.oauth.provider.type": "org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider",
-  #         "fs.azure.account.oauth2.client.id": CLIENT_ID,
-  #         "fs.azure.account.oauth2.client.secret": CLIENT_KEY,
-  #         "fs.azure.account.oauth2.client.endpoint": "https://login.microsoftonline.com/{0}/oauth2/token".format(DIRECTORY_ID)}
