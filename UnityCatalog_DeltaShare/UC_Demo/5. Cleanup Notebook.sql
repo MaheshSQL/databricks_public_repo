@@ -1,0 +1,60 @@
+-- Databricks notebook source
+-- MAGIC %md
+-- MAGIC ## Widget to define Catalog and Schema/Database Name
+
+-- COMMAND ----------
+
+CREATE WIDGET text CatalogName DEFAULT "`uc-demo-tpch`";
+CREATE WIDGET text SchemaName DEFAULT "tpch";
+
+
+-- COMMAND ----------
+
+-- DROP OBJECTS FROM TPCH Database
+
+USE CATALOG $CatalogName;
+USE DATABASE $SchemaName;
+
+DROP VIEW IF EXISTS  vw_FACT_LINEITEM;
+DROP VIEW IF EXISTS  vw_DIM_ORDER;
+DROP VIEW IF EXISTS  vw_DIM_CUSTOMER;
+
+
+-- COMMAND ----------
+
+DROP TABLE IF EXISTS  FACT_LINEITEM;
+DROP TABLE IF EXISTS  DIM_ORDER;
+DROP TABLE IF EXISTS  DIM_CUSTOMER;
+DROP TABLE IF EXISTS  DIM_PART;
+DROP TABLE IF EXISTS  DIM_SUPPLIER;
+
+-- COMMAND ----------
+
+DROP TABLE IF EXISTS  customer;
+DROP TABLE IF EXISTS  lineitem;
+DROP TABLE IF EXISTS  nation;
+DROP TABLE IF EXISTS  orders;
+DROP TABLE IF EXISTS  part;
+DROP TABLE IF EXISTS  partsupp;
+DROP TABLE IF EXISTS  region;
+DROP TABLE IF EXISTS  supplier;
+DROP TABLE IF EXISTS  tableOptimizations;
+
+-- COMMAND ----------
+
+-- DROP DATABASE
+
+DROP DATABASE $SchemaName;
+
+
+-- COMMAND ----------
+
+--DROP EXTERNAL TABLE IF EXIST ANS SCHEMA
+DROP TABLE IF EXISTS  external_loc.Country;
+
+DROP DATABASE external_loc;
+
+-- COMMAND ----------
+
+-- DROP CATALOG
+DROP CATALOG $CatalogName;
