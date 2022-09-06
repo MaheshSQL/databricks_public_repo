@@ -35,6 +35,7 @@
 # MAGIC a. <a href='$./Microsoft Integrations/Azure Key Vault'>Azure Key Vault</a><br>
 # MAGIC b. <a href='$./Microsoft Integrations/Azure Storage'>Azure Storage</a></br>
 # MAGIC c. <a href='$./Microsoft Integrations/CosmosDB'>CosmosDB</a><br>
+# MAGIC d. <a href='$./Microsoft Integrations/Streaming-With-Event-Hubs-Demo'>Event Hub</a><br>
 # MAGIC d. <a href='$./Microsoft Integrations/Azure SQL'>Azure SQL</a><br>
 # MAGIC e. <a href='$./Microsoft Integrations/Synapse Integration'>Synapse Integration</a><br>
 
